@@ -38,7 +38,9 @@ message Certificate {
 }
 
 message Config {
-  // Number 1 was assigned and used by an legacy option.
+  // Whether or not to skip verification of the server's certificate.
+  // Upstream dropped this option; this fork keeps it under its original number.
+  bool allow_insecure = 1;
 
   // List of certificates to be served on server.
   repeated Certificate certificate = 2;

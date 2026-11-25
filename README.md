@@ -1,3 +1,20 @@
+# Xray-core for XrayUI
+
+本仓库是为 [XrayUI](https://github.com/PhoenixNil/XrayUI-dev)（基于 WinUI 3 的 Windows 原生 Xray 图形客户端）准备的 Xray 内核，fork 自 [XTLS/Xray-core](https://github.com/XTLS/Xray-core)，并持续跟进上游更新。
+
+This is the Xray core built for [XrayUI](https://github.com/PhoenixNil/XrayUI-dev), a native Windows GUI client built with WinUI 3. It is a fork of [XTLS/Xray-core](https://github.com/XTLS/Xray-core) that tracks upstream.
+
+与上游相比的改动 / Differences from upstream:
+
+- **AnyTLS 协议**：新增 `anytls` 入站与出站（`proxy/anytls`）。
+  Adds the `anytls` protocol as inbound and outbound.
+- **保留 `allowInsecure`**：上游已移除该 TLS 选项，本内核保留并可用（启用时会输出警告；更安全的替代是 `pinnedPeerCertSha256` / `verifyPeerCertByName`）。
+  Keeps the TLS `allowInsecure` option, which upstream removed. It logs a warning when enabled; `pinnedPeerCertSha256` and `verifyPeerCertByName` are safer.
+
+其余内容均来自上游 README。The rest of this file is the upstream README.
+
+---
+
 # Project X
 
 [Project X](https://github.com/XTLS) originates from XTLS protocol, providing a set of network tools such as [Xray-core](https://github.com/XTLS/Xray-core) and [REALITY](https://github.com/XTLS/REALITY).
