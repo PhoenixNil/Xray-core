@@ -2,10 +2,7 @@
 
 This is the Xray core built for [XrayUI](https://github.com/PhoenixNil/XrayUI-dev), a native Windows GUI client built with WinUI 3. It is a fork of [XTLS/Xray-core](https://github.com/XTLS/Xray-core) that tracks upstream.
 
-Differences from upstream:
-
 - **AnyTLS protocol**: adds `anytls` as both inbound and outbound (`proxy/anytls`).
-- **`allowInsecure` kept**: upstream removed this TLS option; this build keeps it working. It logs a warning when enabled; `pinnedPeerCertSha256` and `verifyPeerCertByName` are safer alternatives.
 
 The rest of this file is the upstream README.
 
